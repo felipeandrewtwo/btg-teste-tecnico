@@ -1,0 +1,37 @@
+<div class="flex">
+    <div class="box">
+        @if (flagResultado) {
+        <ng-container>
+            <h2 class="text-center">Parabéns você acertou</h2>
+            <p class="text-center texto-resultado">{{porcentagemAcertos()}}</p>
+            <div class="botoes">
+                <button (click)="refresh()" class="btn">Reiniciar</button>
+            </div>
+        </ng-container>
+        } @else {
+        <ng-container>
+            <img src="assets/logo.svg" alt="" width="100px">
+            <div>
+                @for (questao of listaQuiz; track questao.id; let i = $index) {
+                @if (questao.mostrar){
+                <div class="questao">
+                    <p>{{ questao.pergunta }}</p>
+                    @for (alternativa of questao.alternativas; track alternativa) {
+                    <label>
+                        <input type="radio" [name]="'questao-' + questao.id" [value]="alternativa"
+                            [(ngModel)]="questao.alternativaMarcada" />
+                        {{ alternativa }}
+                    </label>
+                    }
+                </div>
+                <div class="botoes">
+                    <button [disabled]="i == 0" (click)="voltar(i)" class="btn">voltar</button>
+                    <button (click)="proxima(questao, i)" class="btn">Próximo</button>
+                </div>
+                }
+                }
+            </div>
+        </ng-container>
+        }
+    </div>
+</div>

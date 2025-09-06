@@ -1,0 +1,57 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ebebeb;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.box {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.questao {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.botoes button {
+    width: 150px;
+    padding: 8px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #001e61;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botoes button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.texto-resultado {
+    font-size: 20pt;
+}
