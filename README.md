@@ -2,6 +2,8 @@
 
 Refatoração do live coding realizado 05/09
 
+OBS: O Design está diferente pois não salvei as telas do teste
+
 ## Considerações
 
 - Organizei os métodos
